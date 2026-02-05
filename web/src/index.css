@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans JP", Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 10% 0%, #111a3a 0%, rgba(17,26,58,0) 55%),
+              radial-gradient(900px 450px at 85% 5%, #1a1146 0%, rgba(26,17,70,0) 60%),
+              #070a14;
+  color: #e5e7eb;
+}
+
+/* markdown */
+.prose :where(a):not(:where([class~="not-prose"] *)) {
+  color: #93c5fd;
+}
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+  color: #e5e7eb;
+  background: rgba(255,255,255,0.06);
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.4rem;
+}
+.prose pre {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.08);
+}

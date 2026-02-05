@@ -1,0 +1,12 @@
+{
+  "name": "brief-vault",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "npm --prefix web run dev",
+    "build": "npm --prefix web run build",
+    "preview": "npm --prefix web run preview",
+    "start": "npm --prefix server run start",
+    "start:built": "npm run build && npm --prefix server run start"
+  }
+}

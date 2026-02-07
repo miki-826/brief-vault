@@ -44,17 +44,20 @@ npm run start
 
 ## 開発
 
-```bash
-# web (Vite)
-cd web
-npm run dev
+### 開発サーバ（web + server）を同時に起動
 
-# server
-cd ../server
+```bash
 npm run dev
 ```
 
-※ 現状の `web` は `/api/*` を前提にしているため、開発時は Vite 側でプロキシ設定を入れるのが理想です（次のイテレーションで追加予定）。
+- web (Vite) と server (Express) を `concurrently` で同時起動します
+- `web` は `/api/*` を Vite proxy で server に転送します
+
+#### API 先を変えたい場合
+
+```bash
+VITE_API_TARGET=http://localhost:4177 npm run dev
+```
 
 ## セキュリティ注意
 
